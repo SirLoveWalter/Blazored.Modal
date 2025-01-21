@@ -15,6 +15,7 @@ public partial class BlazoredModalInstance : IDisposable
     [Parameter] public Guid Id { get; set; }
 
     private string? Position { get; set; }
+    private string? Size { get; set; }
     private string? ModalClass { get; set; }
     private bool HideHeader { get; set; }
     private bool HideCloseButton { get; set; }
@@ -129,6 +130,7 @@ public partial class BlazoredModalInstance : IDisposable
     {
         AnimationType = SetAnimation();
         Position = SetPosition();
+        Size = SetSize();
         ModalClass = SetModalClass();
         HideHeader = SetHideHeader();
         HideCloseButton = SetHideCloseButton();
@@ -268,7 +270,6 @@ public partial class BlazoredModalInstance : IDisposable
         if (string.IsNullOrWhiteSpace(modalClass))
         {
             modalClass = "blazored-modal";
-            modalClass += $" {SetSize()}";
         }
 
         return modalClass;

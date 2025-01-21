@@ -13,7 +13,7 @@ else
         @onclick="StopListeningToBackgroundClick">
 
         <FocusTrap @ref="FocusTrap" IsActive="ActivateFocusTrap">
-            <div class="@ModalClass" role="dialog" aria-modal="true" @onmouseup:stopPropagation="true" @onmousedown:stopPropagation="true">
+            <div class="@ModalClass @Size" role="dialog" aria-modal="true" @onmouseup:stopPropagation="true" @onmousedown:stopPropagation="true">
                 @if (!HideHeader)
                 {
                     <div class="bm-header">
